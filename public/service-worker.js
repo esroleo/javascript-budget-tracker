@@ -11,8 +11,7 @@ const FILES_TO_CACHE = [
     "/css/styles.css",
     "/icons/icon-72x72.png",
     "/js/idb.js",
-    "/js/index.js",
-    "https://esroleo-budget-tracker.herokuapp.com/index.html"
+    "/js/index.js"
   ];
 
   // Cache resources
