@@ -7,11 +7,11 @@ const CACHE_NAME = APP_PREFIX + VERSION;
 // files to cache
 
 const FILES_TO_CACHE = [
-    "./index.html",
-    "./css/styles.css",
-    "./js/idb.js",
-    "./js/index.js",
-    "./index.html"
+    "/index.html",
+    "/css/styles.css",
+    "/icons/icon-72x72.png",
+    "/js/idb.js",
+    "/js/index.js",
   ];
 
   // Cache resources
