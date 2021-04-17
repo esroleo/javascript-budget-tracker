@@ -55,5 +55,19 @@ function saveRecord(record) {
     budgetObjectStore.add(record);
   }
 
+  // function saveChartTransactions(records) {
+  //   // open a new transaction with the database with 
+  //   // read and write permissions 
+  //   const transaction = db.transaction(['table_transactions'], 'readwrite');
+  
+  //   // access the object store for `new_transaction`
+  //   const budgetObjectStore = transaction.objectStore('table_transactions');
+  
+  //   // add record to your store with add method
+  //   budgetObjectStore.add(records);
+  // }
+
+
+
 // listen for app coming back online
 window.addEventListener('online', uploadTransaction);

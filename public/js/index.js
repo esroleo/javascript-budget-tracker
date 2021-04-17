@@ -8,15 +8,17 @@ fetch("/api/transaction")
   .then(data => {
     // save db data on global variable
     transactions = data;
+    //saveChartTransactions(transactions)
 
     populateTotal();
-    populateTable();
-    populateChart();
+    populateTable(); //history
+    populateChart(); //chart
   })
   .catch(err => {
     console.log(err)
+    //saveChartTransactions(transactions)
     populateChart();
-    // // fetch failed, so save in indexed db
+    // fetch failed, so save in indexed db
     // saveRecord(transaction);
     // // clear form
     // nameEl.value = "";
