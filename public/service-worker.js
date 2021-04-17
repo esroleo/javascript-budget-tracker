@@ -3,6 +3,7 @@
 const APP_PREFIX = 'BugetTracker-';     
 const VERSION = 'version_01';
 const CACHE_NAME = APP_PREFIX + VERSION;
+const DATA_CACHE_NAME = 'data-cache-v1';
 
 // files to cache
 //    "/index.html",
@@ -65,6 +66,32 @@ self.addEventListener('activate', function(e) {
 // we need to retrieve information frm the cache
 self.addEventListener('fetch', function (e) {
     console.log('fetch request : ' + e.request.url)
+
+    if (evt.request.url.includes('/api/')) {
+      evt.respondWith(
+        caches
+          .open(DATA_CACHE_NAME)
+          .then(cache => {
+            return fetch(evt.request)
+              .then(response => {
+                // If the response was good, clone it and store it in the cache.
+                if (response.status === 200) {
+                  cache.put(evt.request.url, response.clone());
+                }
+  
+                return response;
+              })
+              .catch(err => {
+                // Network request failed, try to get it from the cache.
+                return cache.match(evt.request);
+              });
+          })
+          .catch(err => console.log(err))
+      );
+  
+      return;
+    }
+
     e.respondWith(
         caches.match(e.request).then(function (request) {
             if (request) {

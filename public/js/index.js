@@ -189,6 +189,7 @@ function uploadTransaction() {
           budgetObjectStore.clear();
 
           alert('All saved transactions have been submitted!');
+          location.reload()
         })
         .catch(err => {
           console.log(err);
