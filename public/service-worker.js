@@ -19,7 +19,7 @@ const FILES_TO_CACHE = [
   // Cache resources
 self.addEventListener('install', function (e) {
 
-          // call back funciton waitUntil
+          // call back funciton waitUntil after
       /*
         We use e.waitUntil to tell the browser to wait
         until the work is complete before terminating 
