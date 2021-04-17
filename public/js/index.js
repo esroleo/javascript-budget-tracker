@@ -12,6 +12,15 @@ fetch("/api/transaction")
     populateTotal();
     populateTable();
     populateChart();
+  })
+  .catch(err => {
+    console.log(err)
+    populateChart();
+    // // fetch failed, so save in indexed db
+    // saveRecord(transaction);
+    // // clear form
+    // nameEl.value = "";
+    // amountEl.value = "";
   });
 
 function populateTotal() {
