@@ -31,6 +31,8 @@ request.onsuccess = function(event) {
         //if online upload all data in the data store to our website
         // that is if our app is online
         uploadTransaction();
+        window.location.reload()
+        
     }
 
   };
