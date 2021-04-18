@@ -21,7 +21,7 @@ This is a full stack application which was created using Express js, MongoDb and
 
 ### Major tech snapshot
 
-![tech](./assets/images/tech-used.JPG?raw=true "tech-used.JPG")
+![tech](./assets/images/technology-used.JPG?raw=true "tech-used.JPG")
 
 <a name="web-address"></a>
 ## 2. How to Get There
