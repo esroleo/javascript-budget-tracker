@@ -17,7 +17,7 @@
 <a name="desc"></a>
 ## 1. Description
 
-This is a full stack application which was created using Express js, MongoDb and Moongoose with PWA capabilities.
+This is a full stack application which was created using Express js, MongoDb and Mongoose with PWA capabilities.
 
 ### Major tech snapshot
 
@@ -50,8 +50,8 @@ If you are still interested in running the application you would need to do the 
 <a name="features"></a>
 ## 4. Features
 
-1) Go offline and submit transactions, these transactions will be sent to mongoDB with moongoose once the browser goes online.
-2) Download your app while online and use as the web browser version.
+1) Go offline and submit transactions, these transactions will be sent to mongoDB with mongoose once the browser goes online.
+2) Download your app while online and use it as if a web browser version.
 
 <a name="credits"></a>
 ## 5. Credits
@@ -89,3 +89,5 @@ Please reach out to me
 GitHub Url: https://github.com/esroleo
 
 Email address: esroleo@gmail.com
+
+
