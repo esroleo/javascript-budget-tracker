@@ -67,6 +67,7 @@ self.addEventListener('activate', function(e) {
 self.addEventListener('fetch', function (e) {
     console.log('fetch request : ' + e.request.url)
 
+    // cache is not used to store data that eventually can lead to more than 500 mb.
     // if (e.request.url.includes("/api/")) {
     //   e.respondWith(
     //     caches.open(DATA_CACHE_NAME).then(cache => {
